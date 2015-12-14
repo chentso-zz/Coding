@@ -21,6 +21,8 @@ public class BinarySearchFirstInstance {
             mid = left + (right - left) / 2;
 
             if (array[mid] == search){
+                // If the element is a match, only return if it is the first value
+                // or if the value to the left is not the search value
                 if (mid == 0 || (mid != 0 && array[mid - 1] != search)) {
                     return mid;
                 }
